@@ -6,5 +6,24 @@
                 "pragma": "h"
             }
         ]
+    ],
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": [
+                        "last 2 Chrome versions",
+                        "last 1 Safari versions",
+                        "last 1 iOS versions",
+                        "unreleased Chrome versions",
+                        "unreleased Safari versions",
+                        "unreleased iOS versions"
+                    ],
+                    "uglify": false
+				},
+				"useBuiltIns": true
+            }
+        ]
     ]
 }
