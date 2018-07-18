@@ -1,5 +1,18 @@
 {
+    "name": "yummie-recipes",
+    "version": "0.0.1",
+    "description": "mobile-first PWA for recipes stored as markdown",
+    "author": "Philipp Rottner",
     "license": "MIT",
+    "private": true,
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@dataprison.philipprottner.de:33458/volume1/homes/git/recipes.git"
+    },
+    "scripts": {
+        "install": "yarn install"
+    },
     "dependencies": {
         "hyperapp": "^1.2.6"
     },
