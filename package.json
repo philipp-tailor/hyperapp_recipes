@@ -5,13 +5,15 @@
     "author": "Philipp Rottner",
     "license": "MIT",
     "private": true,
-    "main": "index.js",
+    "main": "app.js",
     "repository": {
         "type": "git",
         "url": "ssh://git@dataprison.philipprottner.de:33458/volume1/homes/git/recipes.git"
     },
     "scripts": {
-        "install": "yarn install"
+        "install": "yarn install",
+        "start": "parcel src/index.html",
+        "build": "parcel build src/index.html --public-url ./"
     },
     "dependencies": {
         "hyperapp": "^1.2.6"
