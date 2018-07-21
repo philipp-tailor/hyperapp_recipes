@@ -1,5 +1,5 @@
 import { h, app } from 'hyperapp'
-import recipes from './mocks/recipes'
+import recipes from './data/recipes'
 
 const state = {
     isLoading: true,
