@@ -1,0 +1,98 @@
+
+body {
+	margin: 0;
+
+	--grey: #eeee;
+}
+
+.app {
+	display: grid;
+	grid-template-columns: 40% 1fr;
+}
+
+.recipeSelector {
+	overflow: scroll;
+}
+
+nav a {
+	cursor: pointer;
+	display: block;
+	padding-left: 20px;
+	padding-top: 40px;
+	overflow: auto;
+}
+
+nav a:hover {
+	box-shadow: 0px 5px var(--grey);
+	/* border-bottom: 2px var(--grey) solid; */
+	/* border-top: 2px var(--grey) solid; */
+}
+
+.focused {
+	background: var(--grey);
+}
+
+nav a h2 {
+	margin-bottom: 10px;
+	margin-top: 0px;
+	padding-left: 30px;
+}
+
+.tag {
+	background: var(--grey);
+	float: right;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	padding: 5px 10px;
+}
+
+.tag:hover {
+	background: white;
+	box-shadow: 5px 3px var(--grey);
+	/* border: 2px solid var(--grey); */
+}
+
+.recipe {
+	background: var(--grey);
+	height: 100vh;
+	overflow: scroll;
+	padding: 40px;
+}
+
+.recipe h1 {
+	margin-top: 40px;
+	position: sticky;
+	text-align: center;
+}
+
+.recipe .metadata {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	margin-left: 60%;
+	margin-right: 20px;
+}
+
+.recipe .content {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 200px 1fr;
+	margin: 20px 40px;
+}
+
+/*
+.ingredients, .steps {
+	padding-left: 40px;
+	padding-right: 20px;
+}
+*/
+
+.ingredients {
+	min-width: 200px;
+	/* max-width: 100%; */
+}
+
+.steps {
+	min-width: 400px;
+}

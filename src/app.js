@@ -7,6 +7,8 @@ import { RecipeSelector } from './components/RecipeSelector'
 import { Recipe } from './components/Recipe'
 // helpers
 import { recipeArrayToMap } from './helpers'
+// style
+import './style/app.css'
 
 const state = {
     isLoading: true,
@@ -17,7 +19,7 @@ const state = {
 // TODO: scope actions
 const actions = {
     loadRecipes: () => () => ({ recipes: recipeArrayToMap(recipes), isLoading: false }),
-    focusRecipe: () => (recipeFocused) => ({ recipeFocused })
+    focusRecipe: (recipeFocused) => () => ({ recipeFocused })
 }
 
 const view = (state, actions) => {
@@ -25,14 +27,14 @@ const view = (state, actions) => {
     const { loadRecipes, focusRecipe } = actions
 
     return (
-        <main oncreate={loadRecipes}>
+        <main oncreate={loadRecipes} class="app">
             <RecipeSelector
                 isLoading={isLoading}
                 recipeFocused={recipeFocused}
                 recipes={recipes}
                 focusRecipe={focusRecipe}
             />
-            {recipeFocused && <Recipe recipe={recipeFocused} />}
+            {recipeFocused.id && <Recipe recipe={recipeFocused} />}
         </main>
     )
 }

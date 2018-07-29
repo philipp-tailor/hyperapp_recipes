@@ -6,5 +6,9 @@ import { RecipeListItem } from './RecipeListItem'
 // TODO: RecipeSelector includes search bar, filters (filters write to and load from URL)
 // TODO: check out whether it would make sense to have this as an async function
 export const RecipeSelector = ({ isLoading, recipeFocused, recipes, focusRecipe }) => (
-    <nav>{Array.from(recipes.values()).map((recipe) => <RecipeListItem recipe={recipe} />)}</nav>
+    <nav class="recipeSelector">
+        {Array.from(recipes.values()).map((recipe) => (
+            <RecipeListItem recipeFocused={recipeFocused} recipe={recipe} onClick={focusRecipe} />
+        ))}
+    </nav>
 )

@@ -1,3 +1,3 @@
 import { h } from 'hyperapp'
 
-export const FilterTag = ({ tag }) => <span>{tag}</span>
+export const FilterTag = ({ tag }) => <span class="tag">{tag}</span>
